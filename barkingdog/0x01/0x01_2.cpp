@@ -12,7 +12,6 @@ int main(){
     }
     for(int i=0;i<N;i++){
         for(int j=i+1;j<N;j++){
-            cout<<v[i]+v[j]<<'\n';
             if(v[i]+v[j]==100) res=1;
         }
     }
