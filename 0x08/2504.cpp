@@ -28,7 +28,6 @@ int main(){
             int t = 2;
             while(!temp.empty() && temp.top().y>s.top().y){
               t*=temp.top().x;
-              cout<<t<<'\n';
               temp.pop();
             }
             temp.push({t, s.top().y});
@@ -47,7 +46,11 @@ int main(){
           if(temp.top().y<s.top().y){
             temp.push({3, s.top().y});
           } else {
-            int t = 3;
+            int t = 0;
+            while(!temp.empty()&& temp.top().y > s.top().y){
+              t+=temp.top().x;
+              temp.pop();
+            }
             while(!temp.empty() && temp.top().y>s.top().y){
               t*=temp.top().x;
               cout<<t<<'\n';
