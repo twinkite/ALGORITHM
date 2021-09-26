@@ -8,7 +8,7 @@ int N, ans;
 vector<pii> v;  // {내구도, 무게}
 
 void egg(int idx, int cnt){  
-  if(idx==N||cnt<=N-1){
+  if(idx==N||cnt>=N-1){
     if(ans<cnt){
       ans=cnt;
     }
