@@ -15,7 +15,7 @@ int main(){
     int temp;
     for(int i=1;i<=N;i++){
         cin>>temp;
-        while(!s.empty()&&s.top().first<=temp){
+        while(!s.empty()&&s.top().first<temp){
             ans[s.top().second]=temp;
             s.pop();
         }

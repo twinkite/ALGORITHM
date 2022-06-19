@@ -34,6 +34,7 @@ int main(){
         }
     }
     if(curcnt>maxcnt) maxval=curval;
+    
     cout<<maxval;
 
     return 0;
