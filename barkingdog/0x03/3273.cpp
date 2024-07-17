@@ -5,22 +5,24 @@ int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    int n, x, temp, res=0;
+    int n, k;
     cin>>n;
-    vector<int> arr(1000001);
-    vector<int> v(n);
-    
-    for(int i=0;i<n;i++){
-        cin>>temp;
-        v[i]=temp;
-        arr[temp]++;
+    vector<int> v = vector<int>(n);
+    vector<int> v1 = vector<int>(1000002);
+    for(int i=0;i<n;i++)
+    {
+        cin>>v[i];
     }
-    
-    cin>>x;
-    for(int i=0;i<n;i++){
-        if(x-v[i]<=100000 && arr[x-v[i]]==1) res++;
+    cin>>k;
+
+    int cnt = 0;
+    for(int i=0; i<n;i++)
+    {
+        if (k-v[i] > 1000000 || k <= v[i]) continue;
+        cnt += v1[k-v[i]];
+        v1[v[i]]++;
     }
 
-    cout<<res;
+    cout<<cnt;
     return 0;
 }
